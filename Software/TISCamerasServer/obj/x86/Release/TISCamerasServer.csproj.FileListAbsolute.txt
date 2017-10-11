@@ -1,5 +1,0 @@
-D:\Dropbox\Proyectos\Visual Studio\DMKTest\TISCamerasServer\bin\Release\TISCamerasServer.exe
-D:\Dropbox\Proyectos\Visual Studio\DMKTest\TISCamerasServer\bin\Release\TISCamerasServer.pdb
-D:\Dropbox\Proyectos\Visual Studio\DMKTest\TISCamerasServer\obj\x86\Release\ResolveAssemblyReference.cache
-D:\Dropbox\Proyectos\Visual Studio\DMKTest\TISCamerasServer\obj\x86\Release\TISCamerasServer.exe
-D:\Dropbox\Proyectos\Visual Studio\DMKTest\TISCamerasServer\obj\x86\Release\TISCamerasServer.pdb
