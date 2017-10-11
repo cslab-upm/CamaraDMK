@@ -1,1 +1,1 @@
-DMK camera for telescopes
+DMK camera for telescope
