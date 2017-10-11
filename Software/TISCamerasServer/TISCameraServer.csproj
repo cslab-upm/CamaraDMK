@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{060FC740-D0A2-4A42-A5D2-C217A66990C8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TISCameraServer</RootNamespace>
+    <AssemblyName>TISCameraServer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>TIS Camera Server</ProductName>
+    <PublisherName>Fernando Serena</PublisherName>
+    <SuiteName>Ciclope Devices</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>0.8.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8968D17D835078520E4A32C462FBF9460FEB71B8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TISCameraServer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>camera.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\General\CameraSocketServer.cs" />
+    <Compile Include="Requests\Operations\CancelAllRequest.cs" />
+    <Compile Include="Requests\Operations\GetFileTimeRequest.cs" />
+    <Compile Include="Requests\Operations\GetVideosRequest.cs" />
+    <Compile Include="Requests\Operations\GetImagesRequest.cs" />
+    <Compile Include="Requests\Operations\GetImageQualityRequest.cs" />
+    <Compile Include="Requests\Operations\SetImageQualityRequest.cs" />
+    <Compile Include="Requests\Operations\GetFilenamesRequest.cs" />
+    <Compile Include="Requests\Operations\GetVideoRequest.cs" />
+    <Compile Include="Requests\Operations\GetImageRequest.cs" />
+    <Compile Include="Requests\Operations\GetFileRequest.cs" />
+    <Compile Include="Requests\Operations\GetFrameRateRequest.cs" />
+    <Compile Include="Requests\Operations\SetFrameRateRequest.cs" />
+    <Compile Include="Requests\Operations\TakeContinuousImagesRequest.cs" />
+    <Compile Include="Requests\Operations\GetLastOperationRequest.cs" />
+    <Compile Include="Requests\Operations\RandomRequest.cs" />
+    <Compile Include="Requests\Operations\GetCurrentOperationRequest.cs" />
+    <Compile Include="Requests\Operations\SetLogPathRequest.cs" />
+    <Compile Include="Requests\Operations\GetVideoCodecsRequest.cs" />
+    <Compile Include="Requests\Operations\GetCameraPropertiesRequest.cs" />
+    <Compile Include="Requests\Operations\GetPropertyRangeRequest.cs" />
+    <Compile Include="Requests\Operations\ListOperationsRequest.cs" />
+    <Compile Include="Requests\Operations\GetPropertyAutoRequest.cs" />
+    <Compile Include="Requests\Operations\SetPropertyAutoRequest.cs" />
+    <Compile Include="Requests\General\ICameraServer.cs" />
+    <Compile Include="Requests\Operations\CaptureVideoRequest.cs" />
+    <Compile Include="Requests\Operations\SetDefaultVideoPathRequest.cs" />
+    <Compile Include="Requests\Operations\GetDefaultVideoPathRequest.cs" />
+    <Compile Include="Requests\Operations\GetPropertyValueRequest.cs" />
+    <Compile Include="Requests\Operations\GetDefaultImagesPathRequest.cs" />
+    <Compile Include="Requests\Operations\SetDefaultImagesRequest.cs" />
+    <Compile Include="Requests\Operations\SetPropertyValueRequest.cs" />
+    <Compile Include="Requests\Operations\PauseCaptureRequest.cs" />
+    <Compile Include="Requests\Operations\ResumeCaptureRequest.cs" />
+    <Compile Include="Requests\Operations\StopCaptureRequest.cs" />
+    <Compile Include="Requests\Operations\StartCaptureRequest.cs" />
+    <Compile Include="Requests\Operations\TakeSequenceRequest.cs" />
+    <Compile Include="Requests\Operations\ListCamerasRequest.cs" />
+    <Compile Include="Requests\Operations\EchoRequest.cs" />
+    <Compile Include="Requests\Operations\TimeLapseRequest.cs" />
+    <Compile Include="Requests\Operations\TakeImageRequest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\General\ServerConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriverEngine\DriverEngine\DriverEngine.csproj">
+      <Project>{9335080d-038f-4d1a-bca4-15524054ddb8}</Project>
+      <Name>DriverEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerEngine\ServerEngine\ServerEngine.csproj">
+      <Project>{8e40ecb1-9419-4f82-be36-0524ae32997f}</Project>
+      <Name>ServerEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TISCameraDriver\TISCameraDriver.csproj">
+      <Project>{5df00b15-c02d-4783-82b6-1ee05ab43a7a}</Project>
+      <Name>TISCameraDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils\Utils.csproj">
+      <Project>{97e7ecdb-ea1e-435f-9658-63a9e66424c4}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
